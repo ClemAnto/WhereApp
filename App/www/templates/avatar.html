@@ -1,0 +1,22 @@
+<ion-modal-view>
+	<ion-content>
+
+		<div class="card">
+			<h2>{{ 'AVATAR_TITLE' | translate }}</h2>
+
+			<div class="button button-close button-clear pull-right" ng-click="cancelAvatar()"><span class="icon ion-close"></span></div>
+
+			<div class="list avatar-grid">
+
+				<div class="avatar-grid-item" ng-repeat="avatar in avatars">
+					<span class="clip" ng-click="updateAvatar('{{avatar.name}}')">
+						<div class="selected icon ion-checkmark" ng-show="user.avatar == avatar.name"></div>
+						<img class="full-image" ng-src="img/avatars/{{avatar.name}}.png">
+					</span>
+				</div>
+
+			</div>
+		</div>
+
+	</ion-content>
+</ion-modal-view>

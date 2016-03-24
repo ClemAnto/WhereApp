@@ -1,0 +1,40 @@
+<div class="page">
+
+
+  <h2>{{ 'DASHBOARD_INTRO' | translate }}</h2>
+
+
+  <br>
+
+  <div class="dashboard">
+
+    <div infinite-scroll="loadMoreDiaries()" infinite-scroll-disabled="noMoreDiariesAvailable" infinite-scroll-distance="2" infinite-scroll-immediate-check="true">
+      <div class="media-list list" ng-repeat="diary in diaries">
+
+        <div class="media well" ng-click="openDiary(diary.id)">
+          <span class="pull-left">
+            <img class="media-object" ng-src="{{diary.avatarImg}}">
+          </span>
+          <div class="media-body">
+            <small class="pull-right">{{diary.date}}</small>
+
+            <h3 ng-if="diary.nickname" class="media-heading">{{diary.nickname}}</h3><h3 ng-if="!diary.nickname" class="media-heading">{{ 'GUEST' | translate }}</h3>
+
+            <p>{{diary.intro}}</p>
+            <div ng-repeat="sentence in diary.diary | limitTo: 2">
+              <p>
+                {{ sentence | translate }}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

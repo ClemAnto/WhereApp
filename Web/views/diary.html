@@ -1,0 +1,35 @@
+<div>
+	<div>
+
+		<div class="list card card-diary diary {{profileClasses}}">
+
+			<div class="item item-avatar">
+				<img ng-src="{{userData.avatarImg}}">
+				<h3>{{userData.date}}</h3>
+				<h2><small>{{ 'DIARY_OF' | translate }}</small> <div ng-if="profiled">{{userData.nickname}}</div><div ng-if="!profiled">{{ 'GUEST' | translate }}</div></h2>
+			</div>
+
+			<div class="item item-body">
+
+				<div ng-repeat="sentence in userData.diary">
+					<p>
+						{{ sentence | translate }}
+					</p>
+					<span class="clip" ng-if="($index + 1) % 2 == 0">
+						<img class="full-image" ng-src="{{ userData.images[ ( ($index / 2) | number:0 ) - 1 ] }}">
+					</span>
+				</div>
+
+			</div>
+
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<button class="btn btn-link btn-xl tab-item" ng-click="goBack()">
+					<span class="glyphicon glyphicon-arrow-left"></span>
+					{{ 'BACK' | translate }}
+				</button>
+			</div>
+
+		</div>
+
+	</div>
+</div>

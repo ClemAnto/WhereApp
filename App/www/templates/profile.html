@@ -1,0 +1,53 @@
+<ion-modal-view>
+	<ion-content>
+
+		<div class="card">
+			<h2>{{ 'PROFILE_TITLE' | translate }}</h2>
+
+			<div class="button button-close button-clear pull-right" ng-if="user.profiled || !profileMandatory" ng-click="cancelProfile()"><span class="icon ion-close"></span></div>
+
+			<span class="item item-input">
+				<span class="input-label item-avatar"><img ng-src="{{avatarImg}}"></span>
+				<button class="button button-positive button-small icon-top ion-edit" ng-click="selectAvatar()">{{ 'CHANGE_AVATAR' | translate }}</button>
+				<button class="button button-positive button-small icon-top ion-camera" ng-click="takePictureAvatar()">{{ 'TAKE_PICTURE' | translate }}</button>
+			</span>
+
+			<div class="list">
+				<form name="myProfile" novalidate ng-submit="updateProfile(myProfile.$valid)">
+
+					<label class="item item-input">
+						<span class="input-label">{{ 'NICKNAME' | translate }}</span>
+						<input type="text" ng-model="user.nickname" placeholder="{{ 'NICKNAME' | translate }}" ng-minlength=3 ng-maxlength=20 required>
+					</label>
+
+					<!-- <label class="item item-input item-select">
+						<span class="input-label">{{ 'AGE' | translate }}</span>
+						<select ng-model="user.age" required>
+							<option value="K">{{ 'KID' | translate }}</option>
+							<option value="T">{{ 'TEEN' | translate }}</option>
+							<option value="A">{{ 'ADULT' | translate }}</option>
+						</select>
+					</label> -->
+
+					<label class="item item-input item-select">
+						<span class="input-label">{{ 'GENDER' | translate }}</span>
+						<select ng-model="user.gender" required>
+							<option value="M">{{ 'MALE' | translate }}</option>
+							<option value="F">{{ 'FEMALE' | translate }}</option>
+						</select>
+					</label>
+
+					<input type="submit" class="button button-block button-positive" ng-disabled="(myProfile.$invalid || (!termsCheckbox.checked && !user.profiled))" value="{{ 'SAVE' | translate }}" />
+
+				</form>
+
+				<!-- <div class="row" ng-if="!user.profiled">
+					<div class="col col-center col-50 col-terms"><a ng-click="viewTerms()">{{ 'TERMS' | translate }}</a></div>
+					<div class="col col-center col-50 col-terms" ng-if="profileMandatory"><ion-checkbox class="item-checkbox-right terms" ng-model="termsCheckbox.checked" ng-checked="termsCheckbox.checked">{{ 'ACCEPT_TERMS' | translate }}</ion-checkbox></div>
+				</div> -->
+
+			</div>
+		</div>
+
+	</ion-content>
+</ion-modal-view>

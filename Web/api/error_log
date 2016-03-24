@@ -1,0 +1,36 @@
+[12-Feb-2016 12:46:27 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:46:31 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:46:36 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:47:50 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:48:39 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:48:48 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 12:50:22 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 12:50:34 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 12:50:35 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 12:51:50 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 12:52:37 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 12:54:58 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::query() in /home/azbrowkn/public_html/api/getDiary.php on line 21
+[12-Feb-2016 12:57:10 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/listDiaries.php on line 35
+[12-Feb-2016 13:32:40 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::query() in /home/azbrowkn/public_html/api/getDiary.php on line 27
+[12-Feb-2016 14:20:04 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::query() in /home/azbrowkn/public_html/api/getDiary.php on line 27
+[12-Feb-2016 14:21:48 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::query() in /home/azbrowkn/public_html/api/getDiary.php on line 27
+[12-Feb-2016 14:23:55 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/listDiaries.php on line 35
+[12-Feb-2016 14:26:30 Europe/Berlin] PHP Parse error:  syntax error, unexpected '*' in /home/azbrowkn/public_html/api/getDiary.php on line 46
+[12-Feb-2016 14:27:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected '*' in /home/azbrowkn/public_html/api/getDiary.php on line 46
+[12-Feb-2016 14:27:28 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 14:27:29 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 14:27:49 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 24
+[12-Feb-2016 14:30:29 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/listDiaries.php on line 35
+[12-Feb-2016 14:30:35 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE) in /home/azbrowkn/public_html/api/getDiary.php on line 30
+[12-Feb-2016 14:30:36 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE) in /home/azbrowkn/public_html/api/getDiary.php on line 30
+[12-Feb-2016 14:30:47 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE) in /home/azbrowkn/public_html/api/getDiary.php on line 30
+[12-Feb-2016 14:30:48 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE) in /home/azbrowkn/public_html/api/getDiary.php on line 30
+[12-Feb-2016 14:30:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE) in /home/azbrowkn/public_html/api/getDiary.php on line 30
+[12-Feb-2016 14:31:09 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 14:31:09 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 14:31:40 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 14:32:12 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 25
+[12-Feb-2016 14:33:07 Europe/Berlin] PHP Fatal error:  Cannot pass parameter 2 by reference in /home/azbrowkn/public_html/api/getDiary.php on line 16
+[12-Feb-2016 14:34:13 Europe/Berlin] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/azbrowkn/public_html/api/getDiary.php on line 23
+[12-Feb-2016 14:54:37 Europe/Berlin] PHP Parse error:  syntax error, unexpected ''. $tbldiaries . '' (T_CONSTANT_ENCAPSED_STRING) in /home/azbrowkn/public_html/api/listDiaries.php on line 21
+[12-Feb-2016 15:03:40 Europe/Berlin] PHP Fatal error:  Call to a member function bindValue() on a non-object in /home/azbrowkn/public_html/api/listDiaries.php on line 23

@@ -1,0 +1,71 @@
+<ion-modal-view>
+	<ion-content>
+		<div class="card">
+
+			<h2>{{ surveyInfo.title | translate }}</h2>
+
+				<form name="mySurvey" novalidate ng-submit="saveSurvey()">
+
+					<div ng-repeat="field in surveyInfo.questions">
+						<h4 translate="{{field.question}}{{surveyProfileSuffix}}">{{field.question}}</h4>
+
+						<span ng-switch on="field.type">
+							<span ng-switch-when="select">
+
+								<!-- Select -->
+								<div class="list">
+
+									<label class="item item-input item-select">
+										<div class="input-label">
+											{{ field.label | translate }}
+										</div>
+										<select name="{{field.name}}" ng-model="surveyData[field.name]" ng-options="item.id as (item.name + surveyProfileSuffix) | translate for item in field.options" required>
+										</select>
+									</label>
+
+								</div>
+
+							</span>
+
+							<span ng-switch-when="checkbox">
+
+								<!-- Checkbox -->
+								<div class="list">
+
+									<ul ng-repeat="item in field.options">
+										<li class="item item-checkbox item-text-wrap">
+											<label class="checkbox">
+												<input type="checkbox" name="{{field.name}}" ng-model="surveyData[field.name][item.id]" translate>
+											</label>
+											{{ (item.name + surveyProfileSuffix) | translate }}
+										</li>
+									</ul>
+
+								</div>
+
+							</span>
+
+							<span ng-switch-when="radio">
+
+								<!-- Radio Button -->
+
+								<ion-list class="item-text-wrap">
+
+									<ion-radio name="{{field.name}}" ng-repeat="item in field.options" ng-value="item.id" ng-model="surveyData[field.name]" ng-required="true">
+										{{ (item.name + surveyProfileSuffix) | translate }}
+									</ion-radio>
+
+								</ion-list>
+
+							</span>
+						</span>
+					</div>
+
+					<button type="submit" class="button button-block button-positive" ng-disabled="mySurvey.$invalid">
+						{{ 'SAVE' | translate }}
+					</button>
+				</form>
+
+		</div>
+	</ion-content>
+</ion-modal-view>

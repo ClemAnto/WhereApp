@@ -1,0 +1,34 @@
+<ion-view title="{{ 'LANGUAGE_TITLE' | translate }}">
+	<ion-content scroll="false">
+		<div class="card card-map">
+
+			<h2>{{ 'PRESENTATION' | translate }}</h2>
+
+		</div>
+
+		<div class="card">
+
+			<div class="row no-wrap">
+				{{ 'CHOOSE_LANGUAGE' | translate }}
+			</div>
+
+			<div class="row">
+
+					<div class="col col-50">
+						<div class="button button-block button-icon-top button-positive btn ng-scope" ng-click="changeLanguage('it')" >
+							<img src="img/flags/flag_IT.png"/><br/>
+							<span translate="BUTTON_LANG_IT">Italian</span>
+						</div>
+					</div>
+
+					<div class="col col-50">
+						<div class="button button-block button-icon-top button-positive btn ng-scope" ng-click="changeLanguage('en')" >
+							<img src="img/flags/flag_EN.png"/><br/>
+							<span translate="BUTTON_LANG_EN">English</span>
+						</div>
+					</div>
+
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

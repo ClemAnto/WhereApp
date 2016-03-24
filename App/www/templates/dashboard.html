@@ -1,0 +1,68 @@
+<ion-view title="{{ 'DASHBOARD_TITLE' | translate }}">
+
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-help-circled" ng-click="showCredits()"></button>
+		<button class="button button-clear icon ion-person" ng-click="openProfile()"></button>
+	</ion-nav-buttons>
+
+	<ion-content class="dashboard" ng-class="{collapsed: mapCollapsed, uncollapsed: !mapCollapsed, 'edit-pictures': enableEditPictures}" scroll="false" scrollbar-y="false">
+
+		<div class="card card-map" ng-click="!enableEditPictures || togglePictures()">
+			<h2>{{ 'MAP_INTRO' | translate }}</h2>
+			<div class="map-frame">
+				<div class="item map map-step-{{comuneInfo.id}}">
+
+						<button ng-repeat="i in [1,2,3,4,5,6]" class="map-cell map-island-{{i}}" ng-class="{active: comuneFocused == i, toVisit: comuneViewedState[i] == false, locked: false, ghost: (comuneFocused && comuneFocused != i)}" ng-click="contentShow(i)" ng-disabled="enableEditPictures">
+							<div class="ribbon"><span><i class="icon ion-star"></i></span></div>
+							<span class="map-cell-icon"><i class="icon ion-compose"></i><img ng-src="{{images[$index]}}" ng-click="takePictureStand(i, $event)"></span></button>
+
+						
+
+				</div>
+			</div>
+		</div>
+
+		<div on-release="toggleMap()" class="card current-details" ng-if="comuneInfo.id">
+			<div class="item item-title current-details-header">
+				<div class="row">
+					<div class="col col-20 col-icon">
+						<span class="map-cell map-island-{{comuneInfo.id}} active">
+							<i class="map-cell-icon"></i>
+							<span class="map-cell-num">{{comuneInfo.id}}</span>
+						</span>
+					</div>
+
+					<div class="col col-70 col-title">
+						<h4>{{ comuneInfo.name | translate }}</h4>
+					</div>
+
+					<div class="col col-10 col-expand">
+						<button ng-class="{'ion-chevron-down':mapCollapsed, 'ion-chevron-up':!mapCollapsed}" class="button button-clear icon"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="item item-body item-text-wrap">
+
+				<div class="clip half-width">
+					<img class="area-picture" ng-src="img/{{comuneInfo.image}}"/>
+				</div>
+
+				<p>{{ comuneInfo.desc | translate }}</p>
+
+			</div>
+			<div class="item item-footer">
+			</div>
+		</div>
+
+	</ion-content>
+
+	<div class="bar bar-footer bar-stable">
+		<div class="progress">
+			<span class="progress-label">{{ (comuneProgress == 100) ? ('PUBLISH_DIARY') : ('GO_DIARY')  | translate }}</span>
+			<span class="progress-bar" ng-click="openDiary()"><span class="progress-bar-completed" style="width: {{comuneProgress}}%;"><span class="progress-bar-completed-label" ng-class="{'progress-bar-center': comuneProgress == 100}">{{ (comuneProgress == 100) ? ('OPEN_DIARY' | translate) : (comuneProgress + '%') }}</span></span></span>
+		</div>
+
+		<button class="button button-positive icon ion-camera take-photo" ng-click="togglePictures()"></button>
+	</div>
+</ion-view>
