@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view class="survey-view">
 	<ion-content>
 		<div class="card">
 
@@ -48,8 +48,7 @@
 							<span ng-switch-when="radio">
 
 								<!-- Radio Button -->
-
-								<ion-list class="item-text-wrap">
+								<ion-list class="item-text-wrap" ng-class="{valid: mySurvey[field.name].$valid}">
 
 									<ion-radio name="{{field.name}}" ng-repeat="item in field.options" ng-value="item.id" ng-model="surveyData[field.name]" ng-required="true">
 										{{ (item.name + surveyProfileSuffix) | translate }}

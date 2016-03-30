@@ -622,7 +622,7 @@ input::-webkit-input-placeholder {
 	margin-top: -20px;
 	margin-bottom: 30px;
 	min-width: 100px;
-	max-width: 60%;
+	max-width: 80%;
 	padding: 14px 20px;
 	top: 0;
 }
@@ -769,12 +769,23 @@ select.emboss {
 
 .modal .item-radio .item-content,
 .modal .item.item-checkbox {
+	/*
 	padding: 8px;
 	padding-left: 60px;
 	color: #3C352C;
+	*/
+
+
+    border: 1px solid #FFF;
+    background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+    background: -linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+    box-shadow: 0px 1px 8px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    opacity: 0.8;
 }
 
 .modal .item-radio .item-content:before {
+	/*
 	display: table;
 	width: 18px;
 	height: 18px;
@@ -787,9 +798,13 @@ select.emboss {
 	position: absolute;
 	left: 18px;
 	top: 4px;
+	*/
+
+
 }
 
 .modal .item-radio .radio-icon {
+	/*
 	position: absolute;
     top: 13px;
     right: auto;
@@ -806,14 +821,32 @@ select.emboss {
     left: 27px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out
+    */
+
+    visibility: visible;
+    opacity: 0;
 }
+
+.item-radio .radio-content .radio-icon,
+.item-radio .radio-content .item-content {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
 
 .item-radio input:checked + .radio-content .radio-icon {
     opacity: 1;
 }
 
 .item-radio input:checked + .radio-content .item-content {
+	/*
     background: rgba(255,255,255,0.2);
+    */
+    opacity: 1;
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    background: -linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
 }
 
 .modal .item-radio input:checked ~ .radio-icon {
@@ -830,10 +863,17 @@ select.emboss {
 	/*content: "";*/
 }
 
+/*
 .modal .item-complex .item-content,
 .modal .item-radio .item-content {
 	background: none;
 }
+*/
+
+
+
+
+
 
 /********** MODAL ***********/
 
@@ -965,6 +1005,17 @@ select.emboss {
 	flex-wrap: nowrap;
 }
 
+.bar-footer:before {
+    content: "";
+    border-bottom: 1px solid #F8F8F8;
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    background-image: linear-gradient(transparent 0%, rgba(255,255,255,0.8) 100%);
+}
 
 .bar-footer .take-photo {
 	flex-grow:0;
@@ -2090,7 +2141,7 @@ input[type="file"] {
 		margin-left: 60px;
 		padding: 10px;
 		min-width: 20px;
-		max-width: 46%;
+		max-width: 75%;
 		top: 0px;
 		margin-bottom: 	10px;
 	}
@@ -2183,7 +2234,7 @@ input[type="file"] {
 		margin-left: 60px;
 		padding: 10px;
 		min-width: 20px;
-		max-width: 46%;
+		max-width: 70%;
 	}
 
 	.bar-stable .button.button-clear {
